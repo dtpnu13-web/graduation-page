@@ -1,0 +1,218 @@
+@import url("https://use.typekit.net/sgl5rfs.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* COMMON */
+.section {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.section .inner {
+  width: calc(100% - 300px);
+}
+.section .title {
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  display: flex;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 78px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+header .header-inner {
+  width: calc(100% - 140px);
+  display: flex;
+  justify-content: space-between;
+}
+header .header-inner #menu {
+  cursor: pointer;
+}
+
+/* OPENING FILM */
+#opening-film {
+  background-color: rgb(255, 62, 62);
+  height: 100vh;
+}
+#opening-film .inner {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 50px;
+}
+
+/* DESCRIPTION */
+#description {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+#description .inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+#description .inner div {
+  height: calc(100vh - 300px);
+}
+#description .inner div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+#description .inner p {
+  width: 368px;
+  font-size: 14px;
+  line-height: 165%;
+  margin-bottom: 30px;
+}
+#description .inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* OFFLINE INFO */
+#offline-info .inner {
+  height: calc(100vh - 340px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#offline-info .inner .btm {
+  display: flex;
+  justify-content: space-between;
+}
+#offline-info .inner .btm .left {
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
+#offline-info .inner .btm .left p {
+  line-height: 164%;
+  margin-bottom: 20px;
+}
+#offline-info .inner .btm .left p:last-child {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* MADE BY */
+#made-by .inner {
+  height: calc(100vh - 320px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#made-by .inner .btm {
+  display: flex;
+  justify-content: space-between;
+}
+#made-by .inner .btm .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#made-by .inner .btm .right > div {
+  margin-bottom: 40px;
+}
+#made-by .inner .btm .right > div p:first-child {
+  margin-bottom: 10px;
+  text-align: center;
+}
+#made-by .inner .btm .right td, #made-by .inner .btm .right th {
+  padding: 8px 35px;
+}
+#made-by .inner .btm .right th {
+  padding-bottom: 20px;
+}
+
+/* PROFESSOR */
+#professor .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+  height: calc(100vh - 300px);
+}
+#professor .inner .prof-cont {
+  display: flex;
+  justify-content: space-around;
+}
+#professor .inner .prof-cont .prof {
+  width: 180px;
+  letter-spacing: 0.13em;
+}
+#professor .inner .prof-cont .prof img {
+  margin-bottom: 10px;
+}
+#professor .inner .prof-cont .prof p {
+  margin-top: 14px;
+  font-size: 16px;
+}
+#professor .inner .prof-cont .prof .prof-name {
+  font-weight: 700;
+}
+#professor .inner .prof-cont .prof .prof-major {
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}/*# sourceMappingURL=about.css.map */
