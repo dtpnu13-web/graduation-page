@@ -1,0 +1,47 @@
+#header{
+    height: 456px;
+    width: 1280px;
+}
+
+#back{
+    margin-left: -10px;
+}
+
+#logo{
+    margin-top: -400px;
+    margin-left: 70px;
+}
+
+#menu{
+    margin-left: 1210px;
+}
+
+#date{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+#button{
+    cursor: pointer;
+}
+
+#contents{
+    height: 702px;
+    width: 1280px;
+}
+
+#button{
+    margin-left: 960px;
+    margin-top: 150px;
+}
+
+ul{
+    margin-left: 150px;
+    margin-top: 150px;
+    cursor: pointer;
+}
+
+#video{
+    margin-left: 400px;
+    margin-top: -250px;
+}
