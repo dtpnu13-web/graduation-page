@@ -10,14 +10,14 @@ a{
 body{
     background-color: #fff;
     width: 100%;
+	background-image: url(img/design_back.svg);
+	background-repeat: no-repeat;
+	background-position: 95% 10%;
 }
 .top{
 	width: 100%;
 	height: 456px;
 	position: relative;
-	background-image: url(img/jaum.png);
-	background-repeat: no-repeat;
-	background-size: contain;
 }
 .btn_title {
 	margin-left: 70px;
@@ -27,7 +27,7 @@ body{
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 1.2em;
 	line-height: 100%;
 	/* or 18px */
 	text-align: center;
@@ -48,7 +48,7 @@ body{
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 1.2em;
 	line-height: 100%;
 	/* or 18px */
 	text-align: center;
@@ -69,7 +69,7 @@ body{
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 1em;
 	line-height: 100%;
 	letter-spacing: 0.125em;
 }
@@ -80,7 +80,7 @@ body{
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 600;
-	font-size: 42px;
+	font-size: 3em;
 	line-height: 100%;
 	letter-spacing: 0.13em;
 	
@@ -90,89 +90,136 @@ body{
 	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 600;
-	font-size: 21px;
+	font-size: 0.4em;
 	letter-spacing: 0.125em;
-	
 }
 .list {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-
-	background-image: url(img/moum.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 100% 95%;
 }
 .list_inner {
 	width: calc(100% - 33%);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 15px;
+	column-gap: 15px;
+	justify-content: space-evenly;
 }
 .con1 {
 	float: left;
-	width: 250px;
-	height: 306px;
-	margin-right: 25px;
-	margin-bottom: 34px;
+	width: 285px;
+	height: 349px;	
 }
 .con1>img {
-	width: 250px;
-	height: 306px;
+	width: 285px;
+	height: 349px;	
 }
 .con2 {
 	float: left;
-	width: 250px;
-	height: 306px;
-	margin-right: 25px;
-	margin-bottom: 34px;
+	width: 285px;
+	height: 349px;	
 }
 .con2>img {
-	width: 250px;
-	height: 306px;
+	width: 285px;
+	height: 349px;	
 }
 .con3 {
 	float: left;
-	width: 250px;
-	height: 306px;
-	margin-right: 25px;
-	margin-bottom: 34px;
+	width: 285px;
+	height: 349px;	
 }
 .con3>img {
-	width: 250px;
-	height: 306px;
+	width: 285px;
+	height: 349px;	
 }
 .card {
 	float: left;
-	width: 250px;
-	height: 306px;	
-	margin-right: 25px;
+	width: 285px;
+	height: 349px;	
 	background-color: #fff;
 	filter: drop-shadow(5px 6px 17px rgba(206, 192, 192, 0.25));
-	margin-bottom: 34px;
 }
 .card>img {
-	width: 250px;
-	height: 200px;
+	width: 285px;
+	height: 211px;
 }
 .card-body{
-	margin-left: 15px;
+	margin-left: 20px;
 	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.card-mid {
+	display: flex;
+	margin-top: 10px;
+}
+.card-pro {
+	display: flex;
+	margin-top: 25px;
+	align-items: center;
 }
 .card-title {
-	font-family: 'Pretendard';
+	font-family: 'Montserrat';
 	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
+	font-weight: 700;
+	font-size: 1em;
 	line-height: 100%;
+
+	color: #000000;
 }
 .card-text {
 	font-family: 'Pretendard';
 	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
+	font-weight: 300;
+	font-size: 0.5em;
 	line-height: 100%;
-	/* identical to box height, or 18px */
-	letter-spacing: -0.12em;
+	/* identical to box height, or 10px */
+	text-align: center;
+	letter-spacing: 0.3em;
+
+	color: #F2D378;
+}
+.mid {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 0.5em;
+	line-height: 100%;
+	/* identical to box height, or 10px */
+	text-align: center;
+	letter-spacing: 0.3em;
+
+	margin-right: 2px;
+	margin-left: 4px;
+
+	color: #000000;
+}
+.by {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 0.7em;
+	line-height: 100%;
+	/* identical to box height, or 12px */
+	text-align: center;
+	margin-right: 4px;
+
+	color: #000000;
+	margin-left: 10px;
+	margin-right: 2px;
+}
+.name {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 0.7em;
+	line-height: 100%;
+	/* or 12px */
+	text-align: center;
+
+	color: #000000;
 }
 .explain {
 	display: flex;
@@ -194,13 +241,13 @@ body{
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 0.8em;
 	line-height: 100%;
 }
 .down {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 0.8em;
 	line-height: 100%;
 }
