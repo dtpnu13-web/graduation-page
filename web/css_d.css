@@ -10,9 +10,10 @@ a{
 body{
     background-color: #fff;
     width: 100%;
-	background-image: url('img/CONCEPT.svg'),url('img/POSTER..svg'),url('img/INTER\ ACTIVE\ ART..svg');
+	background-image: url('img/concept.svg'),url('img/poster.svg'),url('img/inter.svg');
 	background-repeat: no-repeat;
-	background-position: 10% 26%, 10% 40%, 100% 71%;
+	background-position: 10% 25%, 10% 37%, 100% 69%;
+	background-size: 45%;
 }
 .top{
 	width: 100%;

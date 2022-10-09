@@ -10,9 +10,10 @@ a{
 body{
     background-color: #fff;
     width: 100%;
-	background-image: url(img/design_back.svg);
+	background-image: url('img/dt.svg');
 	background-repeat: no-repeat;
 	background-position: 95% 10%;
+	background-size: 35%;
 }
 .top{
 	width: 100%;
