@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/sgl5rfs.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+@import url("http://fonts.cdnfonts.com/css/quenos");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,7 +59,7 @@ table {
           backdrop-filter: blur(6px);
   width: 100%;
   height: 100vh;
-  z-index: 9;
+  z-index: 99;
   position: fixed;
   top: 0;
 }
@@ -66,16 +67,18 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: calc(100% - 95px);
 }
 #menu-cont > div img {
   align-self: end;
   margin: 42px 55px 0 0;
+  cursor: pointer;
 }
 #menu-cont > div .inner {
   width: calc(100% - 300px);
-}
-#menu-cont > div .inner #menu-list {
-  margin-top: 160px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 #menu-cont > div .inner #menu-list a {
   margin-bottom: 15px;
@@ -89,11 +92,11 @@ table {
   transition: 0.2s;
 }
 #menu-cont > div .inner #menu-list a span:first-child {
-  font-family: "Montserrat";
+  font-family: "Quenos";
   font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  letter-spacing: 0.13em;
+  font-weight: 500;
+  font-size: 70px;
+  letter-spacing: -0.045em;
 }
 #menu-cont > div .inner #menu-list a span:last-child {
   font-family: "Pretendard";
@@ -101,15 +104,6 @@ table {
 }
 #menu-cont > div .inner #menu-list a:hover {
   color: #F24822;
-}
-#menu-cont > div .inner #info {
-  margin-top: 60px;
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-size: 12px;
-}
-#menu-cont > div .inner #info p {
-  margin-bottom: 8px;
 }
 
 header {
@@ -166,4 +160,26 @@ header .header-inner #menu {
 footer {
   height: 435px;
   background-color: #151515;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+
+.mobile {
+  display: none;
+  z-index: 999;
+  width: 110vw;
+  height: 110vh;
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 2vw;
+}
+.mobile p {
+  position: absolute;
+  top: 40%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
