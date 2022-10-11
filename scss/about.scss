@@ -25,7 +25,6 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 8vw;
-  // line-height: 114px;
 }
 @keyframes in {
   0%{
@@ -88,7 +87,7 @@ header {
   align-items: end;
   justify-content: center;
   .header-inner {
-    width: calc(100% - 140px);
+    width: calc(100% - 180px);
     display: flex;
     justify-content: space-between;
     #menu {
@@ -105,7 +104,7 @@ header {
   height: 100vh;
   align-items: center;
   position: fixed;
-  right: 82px;
+  right: 95px;
   .inner {
     display: flex;
     flex-direction: column;

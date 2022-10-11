@@ -51,6 +51,11 @@ table {
   border-spacing: 0;
 }
 
+/* COMMON */
+body {
+  background-image: url("../img/background.png");
+}
+
 /* MENU */
 #menu-cont {
   display: none;
@@ -71,7 +76,7 @@ table {
 }
 #menu-cont > div img {
   align-self: end;
-  margin: 42px 55px 0 0;
+  margin: 46px 82px 0 0;
   cursor: pointer;
 }
 #menu-cont > div .inner {
@@ -116,7 +121,10 @@ header .header-inner {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 140px);
+  width: calc(100% - 180px);
+}
+header .header-inner #logo {
+  height: 22px;
 }
 header .header-inner #menu {
   cursor: pointer;
@@ -155,11 +163,6 @@ header .header-inner #menu {
 #btm-info .inner p:first-child {
   margin-bottom: 10px;
   font-weight: 700;
-}
-
-footer {
-  height: 435px;
-  background-color: #151515;
 }
 
 .fp-watermark {

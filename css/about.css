@@ -138,7 +138,7 @@ header {
   justify-content: center;
 }
 header .header-inner {
-  width: calc(100% - 140px);
+  width: calc(100% - 180px);
   display: flex;
   justify-content: space-between;
 }
@@ -153,7 +153,7 @@ header .header-inner #menu {
   height: 100vh;
   align-items: center;
   position: fixed;
-  right: 82px;
+  right: 95px;
 }
 .side-bar .inner {
   display: flex;
