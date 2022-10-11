@@ -1,4 +1,4 @@
 <aside>
-💡 PNU DT 웹팀 정은경 브랜치입니당🙂
+💡 PNU DT 웹팀 레포입니당🙂
 
 </aside>
