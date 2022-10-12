@@ -43,23 +43,16 @@ a {
   margin-bottom: 30px;
 }
 .page-top .inner .txt2 {
-  font-size: 3em;
+  font-size: 2.7em;
   letter-spacing: 0.13em;
 }
 .page-top .inner .txt2 span {
-  margin-left: 35px;
+  margin-left: 25px;
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 600;
   font-size: 0.4em;
   letter-spacing: 0.125em;
-}
-
-.list {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 /* PROFILE */
@@ -115,7 +108,6 @@ a {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: -0.12em;
   color: #B9B9B9;
 }
 .profile .inner .profile_cont .teamlink {
@@ -132,32 +124,31 @@ a {
   width: 274px;
   height: 25px;
   font-family: "Montserrat";
-  font-style: normal;
   font-weight: 300;
   font-size: 1.5em;
-  line-height: 100%;
   letter-spacing: -0.12em;
   margin-top: 100px;
 }
 .concept .inner .title {
+  position: relative;
   width: 153px;
   height: 60px;
   margin-top: 15px;
-  /* Team_subtitle */
   font-family: "Pretendard";
-  font-style: normal;
   font-weight: 900;
   font-size: 3.8em;
-  line-height: 100%;
-  /* identical to box height, or 60px */
-  letter-spacing: -0.12em;
+}
+.concept .inner .title img {
+  position: absolute;
+  width: 830px;
+  top: -32px;
+  left: -156px;
 }
 .concept .inner .desc {
   margin-top: 65px;
   font-family: "Pretendard";
-  font-style: normal;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 160%;
   display: flex;
   align-items: center;
@@ -179,10 +170,17 @@ a {
   justify-content: space-between;
 }
 .poster .inner .txt .title {
+  position: relative;
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 3.8em;
   letter-spacing: -0.12em;
+}
+.poster .inner .txt .title img {
+  position: absolute;
+  width: 755px;
+  top: 30px;
+  left: -110px;
 }
 .poster .inner .txt .sub-title {
   width: 58px;
@@ -204,7 +202,6 @@ a {
   font-family: "Pretendard";
   font-weight: 700;
   font-size: 1.8em;
-  letter-spacing: -0.12em;
   margin-bottom: 20px;
   margin-top: 5px;
 }
@@ -213,7 +210,7 @@ a {
   margin-bottom: 0px;
   font-family: "Pretendard";
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 160%;
   text-align: justify;
 }
@@ -235,6 +232,7 @@ a {
   height: 800px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .inter .inner .top .txt {
   display: flex;
@@ -242,10 +240,17 @@ a {
   justify-content: space-between;
 }
 .inter .inner .top .txt .title {
+  position: relative;
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 3.8em;
   letter-spacing: -0.12em;
+}
+.inter .inner .top .txt .title img {
+  position: absolute;
+  width: 646px;
+  top: 30px;
+  left: 690px;
 }
 .inter .inner .top .txt .sub-title {
   width: 58px;
@@ -266,7 +271,6 @@ a {
   font-family: "Pretendard";
   font-weight: 700;
   font-size: 1.8em;
-  letter-spacing: -0.12em;
   margin-bottom: 20px;
   margin-top: 5px;
 }
@@ -275,20 +279,30 @@ a {
   margin-bottom: 0px;
   font-family: "Pretendard";
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 160%;
   text-align: justify;
 }
 .inter .inner .top .txt .desc .view-map {
   margin-top: 48px;
   width: 480px;
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   gap: 13px;
 }
 .inter .inner .top .txt .desc .view-map img {
   width: 293px;
   height: 173px;
+}
+.inter .inner .top .btn-modal__open {
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  top: 240px;
+  left: 420px;
+}
+.inter .inner .top .btn-modal__open img {
+  filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.09));
 }
 .inter .inner .top .img {
   align-self: end;
@@ -299,12 +313,44 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.inter .inner .top .img:hover {
+  z-index: 9;
+}
+.inter .inner .top .img:hover img {
+  -webkit-animation: scoll 5s infinite ease-in-out;
+          animation: scoll 5s infinite ease-in-out;
+}
+@-webkit-keyframes scoll {
+  0% {
+    object-position: 20%;
+  }
+  50% {
+    object-position: 80%;
+  }
+  100% {
+    object-position: 20%;
+  }
+}
+@keyframes scoll {
+  0% {
+    -o-object-position: 20%;
+       object-position: 20%;
+  }
+  50% {
+    -o-object-position: 80%;
+       object-position: 80%;
+  }
+  100% {
+    -o-object-position: 20%;
+       object-position: 20%;
+  }
+}
 .inter .inner .examples {
   margin-top: 30px;
   display: flex;
   gap: 13px;
   width: 930px;
-  overflow: scroll;
+  overflow: auto;
 }
 .inter .inner .examples .example {
   display: flex;
@@ -314,6 +360,35 @@ a {
 .inter .inner .examples .example img {
   width: 293px;
   height: 173px;
+}
+
+/* INTER-MODAL */
+.modal-cont {
+  display: none;
+  z-index: 999;
+  background: rgba(34, 31, 31, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-cont .modal-inner {
+  width: 825px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-cont .modal-inner video {
+  width: 825px;
+}
+.modal-cont .btn-modal__close {
+  cursor: pointer;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 /* BTM-NAVI */

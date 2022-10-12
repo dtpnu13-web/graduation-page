@@ -1,4 +1,4 @@
-/* menu of off */
+/* menu on off */
 $('#menu').click(function(){
   $('#menu').fadeOut();
   $('#menu-cont').fadeIn();
@@ -6,6 +6,17 @@ $('#menu').click(function(){
 $('#menu-close').click(function(){
   $('#menu-cont').fadeOut();
   $('#menu').fadeIn();
+})
+
+/* modal on off */
+body =  document.querySelector('body');
+$('.btn-modal__open').click(function(){
+  $('.modal-cont').fadeIn();
+  body.style.overflow = 'hidden';
+})
+$('.btn-modal__close').click(function(){
+  $('.modal-cont').fadeOut();
+  body.style.overflow = 'auto';
 })
 
 

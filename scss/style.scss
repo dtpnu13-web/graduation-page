@@ -6,6 +6,9 @@
 /* COMMON */
 body {
   background-image: url('../img/background.png');
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
 }
 
 /* MENU */
@@ -30,6 +33,7 @@ body {
     }
     .inner {
       width: calc(100% - 300px);
+      max-width: 1200px;
       height: 100%;
       display: flex;
       align-items: center;
@@ -74,6 +78,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: calc(100% - 180px);
+    max-width: 1300px;
     #logo {
       height: 22px;
     }
