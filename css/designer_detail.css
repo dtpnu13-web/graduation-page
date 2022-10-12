@@ -284,7 +284,7 @@ a {
   text-align: justify;
 }
 .inter .inner .top .txt .desc .view-map {
-  margin-top: 48px;
+  margin-top: 20px;
   width: 480px;
   overflow: auto;
   display: flex;
@@ -346,10 +346,9 @@ a {
   }
 }
 .inter .inner .examples {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
-  gap: 13px;
-  width: 930px;
+  justify-content: space-between;
   overflow: auto;
 }
 .inter .inner .examples .example {
