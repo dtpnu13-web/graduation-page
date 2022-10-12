@@ -6,6 +6,9 @@
 /* COMMON */
 body {
   background-image: url('../img/background.png');
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
 }
 
 /* MENU */
@@ -30,6 +33,7 @@ body {
     }
     .inner {
       width: calc(100% - 300px);
+      max-width: 1200px;
       height: 100%;
       display: flex;
       align-items: center;
@@ -43,10 +47,10 @@ body {
             font-style: normal;
             font-weight: 600;
             &:first-child {
-              font-family: 'Quenos';
+              font-family: 'Montserrat';
               font-style: normal;
-              font-weight: 500;
-              font-size: 70px;
+              font-weight: 700;
+              font-size: 90px;
               letter-spacing: -0.045em;
             }
             &:last-child {
@@ -65,15 +69,18 @@ body {
 }
 
 header {
+  z-index: 66;
   display: flex;
   justify-content: center;
-  height: 100px;
+  height: 120px;
   width: 100%;
+  margin-bottom: 20px;
   .header-inner {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
     width: calc(100% - 180px);
+    max-width: 1300px;
     #logo {
       height: 22px;
     }
@@ -88,7 +95,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 280px);
   .main-svg_container {
     display: flex;
     justify-content: center;
