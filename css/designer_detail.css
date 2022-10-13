@@ -24,6 +24,11 @@ a {
   padding: 40px 60px;
 }
 
+.distort {
+  transition: transform 0.25s;
+  will-change: transform;
+}
+
 /* PAGE-TOP */
 .page-top {
   align-items: flex-end;
@@ -349,7 +354,6 @@ a {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  overflow: auto;
 }
 .inter .inner .examples .example {
   display: flex;

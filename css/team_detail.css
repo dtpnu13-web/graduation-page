@@ -30,6 +30,10 @@ a {
   padding: 40px 60px;
 }
 
+#team-member, #concept, #team-film, #team-inter {
+  height: 100vh;
+}
+
 /* SIDE BAR */
 .side-bar {
   z-index: 9;
@@ -39,9 +43,8 @@ a {
   position: fixed;
 }
 .side-bar .inner {
-  position: fixed;
-  top: 50%;
-  left: 95px;
+  margin-top: 700px;
+  margin-left: 95px;
   transform: translate(0, -50%);
   display: flex;
   flex-direction: column;
@@ -112,6 +115,7 @@ a {
   width: 100%;
   height: 300px;
   line-height: 100%;
+  margin-bottom: 100px;
 }
 #page-top .inner {
   font-family: "Montserrat";
@@ -137,9 +141,6 @@ a {
 }
 
 /* TEAM-MEMBER */
-#team-member {
-  padding-top: 125px;
-}
 #team-member .inner {
   display: flex;
   justify-content: center;
@@ -162,9 +163,6 @@ a {
 }
 
 /* CONCEPT */
-#concept {
-  padding-top: 250px;
-}
 #concept .inner {
   display: flex;
   flex-direction: column;
@@ -198,9 +196,6 @@ a {
 }
 
 /* TEAM-FILM */
-#team-film, #team-inter {
-  padding-top: 250px;
-}
 #team-film .inner, #team-inter .inner {
   position: relative;
   width: 700px;
@@ -223,27 +218,40 @@ a {
   filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.09));
 }
 
-#team-inter {
-  padding-top: 150px;
+#team-inter .inner .btn-modal__open {
+  top: 480px;
 }
-#team-inter .inter-viewmap {
+#team-inter .inner .inter-viewmap {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
 }
-#team-inter .inter-viewmap span {
+#team-inter .inner .inter-viewmap span {
   font-size: 0.8em;
   align-self: end;
 }
-#team-inter .inter-viewmap img {
+#team-inter .inner .inter-viewmap img {
   width: 180px;
   margin-left: 20px;
 }
 
 /* MODAL-CONT */
+.modal-back {
+  display: none;
+  z-index: 53;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
 .modal-cont {
+  color: #000;
   z-index: 55;
-  width: 70%;
+  width: 65%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -252,7 +260,7 @@ a {
   margin-right: -80vw;
 }
 .modal-cont .modal-inner {
-  padding: 70px 100px;
+  padding: 70px 120px 70px 120px;
 }
 .modal-cont .modal-inner .btn-modal__close {
   cursor: pointer;
@@ -323,14 +331,29 @@ a {
   background: #8871bf;
 }
 
-.inter-modal .modal-inner .photo-cont .inter-example {
+.inter-modal .modal-inner .imsi {
+  padding-right: 20px;
+  height: 500px;
+  overflow: scroll;
+}
+.inter-modal .modal-inner .imsi .title-cont {
+  margin-bottom: 30px;
+}
+.inter-modal .modal-inner .imsi .desc {
+  margin-top: 50px;
+}
+.inter-modal .modal-inner .imsi hr {
+  margin: 40px 0;
+}
+.inter-modal .modal-inner .imsi .photo-cont .inter-example {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
 }
-.inter-modal .modal-inner .photo-cont .inter-example img {
-  width: 236px;
+.inter-modal .modal-inner .imsi .photo-cont .inter-example div img {
+  max-width: 210px;
 }
-.inter-modal .modal-inner .photo-cont .inter-example p {
+.inter-modal .modal-inner .imsi .photo-cont .inter-example div p {
+  max-width: 210px;
   margin-top: 10px;
   line-height: 130%;
   font-size: 0.8em;
