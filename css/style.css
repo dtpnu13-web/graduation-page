@@ -108,6 +108,7 @@ body {
   letter-spacing: -0.045em;
 }
 #menu-cont > div .inner #menu-list a span:last-child {
+  margin-left: 15px;
   font-family: "Pretendard";
   font-size: 14px;
 }

@@ -10,11 +10,12 @@ $('#menu-close').click(function(){
 
 /* modal on off */
 body =  document.querySelector('body');
-$('.designer-inter.btn-modal__open').click(function(){
+$('.inter .btn-modal__open').click(function(){
+  console.log('d')
   $('.modal-cont').fadeIn();
   body.style.overflow = 'hidden';
 })
-$('.designer-inter.btn-modal__close').click(function(){
+$('.modal-cont.designer-inter').click(function(){
   $('.modal-cont').fadeOut();
   body.style.overflow = 'auto';
 })
