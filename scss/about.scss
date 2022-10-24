@@ -232,6 +232,9 @@ header {
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      img {
+        width: 400px;
+      }
       .right {
         display: flex;
         flex-direction: column;

@@ -112,9 +112,10 @@ header {
   font-size: 14px;
   .inner {
     display: flex;
+    width: calc(100% - 180px);
+    max-width: 1400px;
     justify-content: space-around;
     align-items: center;
-    max-width: 1400px;
     margin-bottom: 50px;
     img {
       width: 120px;

@@ -288,6 +288,9 @@ header .header-inner #menu {
   align-items: center;
   height: 100%;
 }
+#_made-by .inner .cont img {
+  width: 400px;
+}
 #_made-by .inner .cont .right {
   display: flex;
   flex-direction: column;
