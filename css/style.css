@@ -160,9 +160,10 @@ header .header-inner #menu {
 }
 #btm-info .inner {
   display: flex;
+  width: calc(100% - 180px);
+  max-width: 1400px;
   justify-content: space-around;
   align-items: center;
-  width: calc(100% - 140px);
   margin-bottom: 50px;
 }
 #btm-info .inner img {
