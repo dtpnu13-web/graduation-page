@@ -226,9 +226,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/teams/background-logo.svg");
+  background-image: url("../img/teams/logo.svg");
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 45%;
   background-position: 50% 30%;
 }
 #concept .inner .sub-title {

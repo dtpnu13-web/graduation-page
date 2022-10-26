@@ -383,6 +383,7 @@ header .header-inner #menu {
   line-height: 165%;
   margin-bottom: 30px;
   font-size: 16px;
+  text-align: justify;
 }
 #_description .inner p:last-child {
   margin-bottom: 0;

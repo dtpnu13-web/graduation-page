@@ -102,7 +102,7 @@ a {
   justify-content: space-between;
 }
 .profile .inner .profile_cont .profile_txt {
-  align-self: flex-start;
+  align-self: flex-end;
   margin-left: 30px;
 }
 .profile .inner .profile_cont .profile_txt .sns {
