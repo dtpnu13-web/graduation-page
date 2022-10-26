@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+
+  <title>PNU DT 2022 - ABOUT</title>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  
+  <!-- shuffle text -->
+  <script src="../js/shuffle-text.js"></script>
+
+  <!-- fullpage -->
+  <link rel="stylesheet" href="../css/fullpage.css">
+  <script src="../js/fullpage.js"></script>
+  <script defer>
+    function shuffle(temp){
+      $('.title').html(temp);
+      var text1 = new ShuffleText(document.querySelector('.title > p:nth-child(1)'));
+      text1.start();
+      var text2 = new ShuffleText(document.querySelector('.title > p:nth-child(2)'));
+      text2.start();
+      var text3 = new ShuffleText(document.querySelector('.title > p:nth-child(3)'));
+      text3.start();
+    }
+    function makeAnimation(temp, a1, a2, a3){
+      $('.title').removeClass('active');
+      $('.title').html(temp);
+      $('.title > p:nth-child(1)').css('animation', `${a1} 3s ease-out forwards`);
+      $('.title > p:nth-child(2)').css('animation', `${a2} 3s ease-out forwards`);
+      $('.title > p:nth-child(3)').css('animation', `${a3} 3s ease-out forwards`);
+    }
+    function makeSideBar(v){
+      if (v == 0) {
+        $('.side-bar > div > a').removeClass('tooltip');
+        $('.side-bar > div > a:nth-child(5)').css("display",'none');
+        $('.side-bar > div > a:nth-child(1) > img').attr("src",'../img/sidebar-1.png');
+        $('.side-bar > div > a:nth-child(2) > img').attr("src",'../img/sidebar-2.png');
+        $('.side-bar > div > a:nth-child(3) > img').attr("src",'../img/sidebar-3.png');
+        $('.side-bar > div > a:nth-child(4) > img').attr("src",'../img/sidebar-4.png');
+        $('.side-bar .inner img').css('width', '40px');
+      } else {
+        $('.side-bar > div > a').addClass('tooltip');
+        $('.side-bar > div > a:last-child').removeClass('tooltip');
+        $('.side-bar > div > a:nth-child(1) > img').attr("src",'../img/sidebar-ellipse.svg');
+        $('.side-bar > div > a:nth-child(2) > img').attr("src",'../img/sidebar-ellipse.svg');
+        $('.side-bar > div > a:nth-child(3) > img').attr("src",'../img/sidebar-ellipse.svg');
+        $('.side-bar > div > a:nth-child(4) > img').attr("src",'../img/sidebar-ellipse.svg');
+        $('.side-bar .inner img').css('width', '10px');
+        $('.side-bar > div > a:nth-child(5)').css("display",'block');
+      }
+    }
+    $(document).ready(function() {
+      $('.tooltip:before').css('content', '');
+      $('#fullpage').fullpage({
+          //options here
+          licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+          autoScrolling:true,
+          scrollHorizontally: true,
+
+          onLeave: function(origin, destination, direction, trigger){
+            var origin = this;
+            if (direction == 'up') {
+              $('.scroll').css('display', 'block');
+              if (destination.index == 0) {
+                $('.title').addClass('active')
+                $('.title').css('animation', 'in 3s ease-out forwards');
+                $('.title').html('<p>PㅤㅤㅤEㅤR</p><p>ㅤㅤㅤSㅤO</p><p>ㅤㅤNㅤㅤㅤA.</p>');
+                makeSideBar(0);
+              } else {
+                makeSideBar(1);
+                if (destination.index == 1) {
+                  shuffle('<p>PER</p><p>SO</p><p>NA.</p>');
+                } else if (destination.index == 2) {
+                  shuffle('<p>OFF</p><p>LINE</p><p>INFO.</p>');
+                } else if (destination.index == 3) {
+                  shuffle('<p>MADE</p><p>BY.</p><p>ㅤ</p>');
+                }
+              }
+            }
+            if (direction == 'down') {
+              makeSideBar(1)
+              if ($('.title').hasClass('active')) {
+                $('.title').css('animation', 'none');
+                if (destination.index == 1) {
+                  makeAnimation('<p>PㅤㅤEㅤㅤR</p><p>ㅤㅤSㅤㅤO</p><p>ㅤㅤNㅤㅤAㅤㅤ.</p>', 'out-1', 'out-2', 'out-2');
+                } else if (destination.index == 2) {
+                  makeAnimation('<p>OㅤㅤFㅤㅤF</p><p>ㅤLㅤIㅤNㅤE</p><p>ㅤIㅤNㅤFㅤOㅤ.</p>', 'out-1', 'out-3', 'out-3');
+                } else if (destination.index == 3) {
+                  makeAnimation('<p>ㅤMㅤAㅤDㅤE</p><p>ㅤㅤBㅤㅤYㅤㅤ.</p><p>ㅤ</p>', 'out-3', 'out-2', 'out-2');
+                } else if (destination.index == 4) {
+                  $('.scroll').css('display', 'none');
+                  makeAnimation('<p>PㅤㅤRㅤㅤO</p><p>ㅤㅤFㅤㅤE</p><p>ㅤSㅤSㅤOㅤRㅤ.</p>', 'out-1', 'out-2', 'out-3');
+                }
+              } else {
+                if (destination.index == 2) {
+                  shuffle('<p>OFF</p><p>LINE</p><p>INFO.</p>');
+                } else if (destination.index == 3) {
+                  shuffle('<p>MADE</p><p>BY.</p><p>ㅤ</p>');
+                } else if (destination.index == 4) {
+                  shuffle('<p>PRO</p><p>FE</p><p>SSOR.</p>');
+                  $('.scroll').css('display', 'none');
+                }
+              }
+            }
+          }
+      });
+    });
+  </script>
+
+  <!-- kakao map api -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37d82119f1fe8231a72b57591b75aa52"></script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/about.css">
+  
+  <script defer src="../js/index.js"></script>
+  <script defer src="../js/about.js"></script>
+</head>
+<body>
+
+  <!-- MENU -->
+  <div id="menu-cont">
+    <div>
+      <img src="../img/icon_menu__close.svg" alt="닫기" id="menu-close">
+      <div class="inner">
+        <div id="menu-list">
+          <a href="designers.html">
+            <span>DESIGNERS</span>
+            <span>[디자이너]</span>
+          </a>
+          <a href="teams.html">
+            <span>TEAM PROJECT</span>
+            <span>[팀 프로젝트]</span>
+          </a>
+          <a href="about.html">
+            <span>ABOUT</span>
+            <span>[어바웃]</span>
+          </a>
+          <a href="javascript:void(0)">
+            <span>GUEST PAGE</span>
+            <span>[방명록]</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      
+      <a href="/"><img src="../img/web-logo.svg" alt="logo" id="logo"/></a>
+      <div>
+        <a href="javascript:void(0)"><img src="../img/icon_catalogue.svg" alt="catalogue" id="catalogue"/></a>
+        <img src="../img/icon_menu.svg" alt="menu" id="menu"/>
+      </div>
+    
+    </div>
+  </header>
+
+  <!-- SIDE BAR -->
+  <div class="side-bar">
+    <div class="inner">
+      <a href="#description" data-title="주제 소개"><img src="../img/sidebar-1.png" width="40px" alt=""></a>
+      <a href="#offline-info" data-title="장소 안내"><img src="../img/sidebar-2.png" width="40px" alt=""></a>
+      <a href="#made-by" data-title="참여인원 소개"><img src="../img/sidebar-3.png" width="40px" alt=""></a>
+      <a href="#professor" data-title="교수진 소개"><img src="../img/sidebar-4.png" width="40px" alt=""></a>
+      <a href="#opening-film"><img src="../img/sidebar-arrow.svg" alt=""></a>
+    </div>
+    <div class="scroll">
+      <img src="../img/icon_scroll.svg" alt="">
+    </div>
+  </div>
+
+  <!-- SHUFFLE TITLE -->
+  <div class="title active">
+    <p>PㅤㅤㅤEㅤR</p>
+    <p>ㅤㅤㅤSㅤO</p>
+    <p>ㅤㅤNㅤㅤㅤA.</p>
+  </div>
+
+  <!-- MAIN CONTENT AREA -->
+  <div id="fullpage">
+
+    <!-- OPENING FILM -->    
+    <div class="section" id="_opening-film" data-anchor="opening-film">
+      <div class="inner">
+        오프닝필름 부분
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="section" id="_description" data-anchor="description">
+      <div class="inner">
+        <div>
+          <p class="desc">우리는 세상을 살아가는 동안 한 가지 정체성으로 규정되지 않는다. 학교에서의 나와 가정에서의 내가 다르듯 상황에 따라 달라지는 자신의 모습을 일상 속에서 쉽게 찾아볼 수 있다.</p>
+          <p>ㅤ</p>
+          <p>ㅤ</p>
+          <p class="desc"> 페르소나는 자아를 유연하게 넘나들며 주위 사람들의 요구를 포용하여 만들어지기 때문에 다양한 면모를 보일 수 있는 수단으로 이용된다.<br>본 전시를 통해 구성원들은 페르소나에 대한 각자의 해석으로 자신을 찾아보고 표현하고자 한다. ‘Persona(페르소나)’에서 관객들은 15명이 정의한 페르소나의 모습들을 마주하게 될 것이다.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- OFFLINE INFO -->
+    <div class="section" id="_offline-info" data-anchor="offline-info">
+      <div class="inner">
+
+        <div class="btm">
+          <div class="left">
+            <p>
+              부산디자인진흥원 </br>
+              부산광역시 해운대구 센텀동로 57 부산디자인진흥원 1층
+            </p>
+            <p>
+              DESIGN CENTER BUSAN 1F Exhibition Hall </br>
+              57, Centum dong-ro, Haeundae-gu, Busan
+            </p>
+            <p>2022.11.04 - 2022.11.06</p>
+          </div>
+          <div id="map" style="width:400px;height:400px;"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MADE BY -->
+    <div class="section" id="_made-by" data-anchor="made-by">
+      <div class="inner">
+
+        <div class="cont">
+          <div class="left">
+            <img src="../img/pnudt13.jpeg" alt="PNU DT 13" />
+            <div>
+              <p>2022 열세 번째 부산대학교 디자인학과 [Design & Technology 전공] 졸업작품집</p>
+              <p>본 홈페이지는 2022 졸업 논문을 대신합니다.</p>
+            </div>
+          </div>
+          <div class="right">
+            <div>
+              <p>졸업전시 위원장 | 박지혜</p>
+              <p>졸업전시 부위원장 | 이지원</p>
+            </div>
+            <table>
+              <tr>
+                <th>도록</th>
+                <th>DP</th>
+                <th>Web</th>
+                <th>영상</th>
+              </tr>
+              <tr>
+                <td>유현지</td>
+                <td>공준희</td>
+                <td>탁향정</td>
+                <td>서가영</td>
+              </tr>
+              <tr>
+                <td>박태현</td>
+                <td>서가영</td>
+                <td>오재연</td>
+                <td>김현서</td>
+              </tr>
+              <tr>
+                <td>위진우</td>
+                <td>이정호</td>
+                <td>이지현</td>
+                <td>민재현</td>
+              </tr>
+              <tr>
+                <td>정유라</td>
+                <td>정보경</td>
+                <td>정은경</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>정재헌</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- PROFESSOR -->
+    <div class="section" id="_professor" data-anchor="professor">
+      <div class="inner">
+
+        <div class="prof-cont">
+          <div class="prof">
+            <img src="../img/prof-03_mod.jpg" alt="이화세 교수님">
+            <p class="prof-name">이화세 교수님</p>
+            <p class="prof-major">HCI</p>
+          </div>
+          <div class="prof">
+            <img src="../img/prof-02_mod.jpg" alt="김철기 교수님">
+            <p class="prof-name">김철기 교수님</p>
+            <p class="prof-major">UX / AI / <b>감성공학</b></p>
+          </div>
+          <div class="prof">
+            <img src="../img/prof-01_mod.png" alt="김태완 교수님">
+            <p class="prof-name">김태완 교수님</p>
+            <p class="prof-major">DIGITAL CONTENT DESIGN</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE -->
+  <div class="mobile">
+    <p>앗! 모바일에서 접속하셨군요!</p>
+    <p>지금 DT 페이지는 PC 환경에서 접속해주세요🥺</p>
+  </div>
+</body>
+</html>
