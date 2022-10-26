@@ -1,9 +1,9 @@
 // _responsive.scss
  
 /*반응형 화면 크기*/
-$mobile: 500px;
-$desktop: 1024px;
-$big-desktop: 1440px;
+$mobile: 600px;
+$tablet: 1024px;
+$desktop: 1440px;
  
 // 크기가 tablet 이하
 @mixin mobile{
@@ -18,13 +18,13 @@ $big-desktop: 1440px;
       }
 }
 @mixin desktop{
-      @media (min-width: ($tablet+ 1)) and (max-width: $big-desktop){
+      @media (min-width: ($tablet+ 1)) and (max-width: $desktop){
             @content;
       }
 }
 // 크기가 desktop 이상
 @mixin big-desktop{
-      @media (min-width: $big-desktop){
+      @media (min-width: ($desktop+1)){
             @content;
       }
 }

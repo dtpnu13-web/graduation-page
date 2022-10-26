@@ -68,6 +68,19 @@ body {
         }
       }
     }
+    @include tablet {
+      .inner {
+        #menu-list {
+          a {
+            span { 
+              &:first-child{
+                font-size: 60px; 
+              }
+            }
+          }
+        }
+      }
+    }
     @include mobile { 
       img { margin: 50px 40px 0 0;}
       .inner {
@@ -171,6 +184,9 @@ footer {
     p:first-child {
       margin-bottom: 10px;
       font-weight: 700;
+    }
+    @include tablet {
+      div:nth-child(2) { display: none; }
     }
     @include mobile {
       width: calc(100%);

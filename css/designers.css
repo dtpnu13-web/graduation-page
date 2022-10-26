@@ -27,7 +27,7 @@ a {
   width: 930px;
   padding: 40px 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .section .inner {
     width: calc(100% - 90px);
     padding: 20px 30px;
@@ -44,7 +44,7 @@ a {
   right: -40px;
   top: 190px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #background {
     display: none;
   }
@@ -58,7 +58,7 @@ a {
   line-height: 100%;
   margin-bottom: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .page-top {
     height: 100px;
     margin-bottom: 0;
@@ -86,7 +86,7 @@ a {
   font-size: 0.4em;
   letter-spacing: 0.125em;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .page-top .inner .txt1 {
     font-size: 0.5em;
     margin-bottom: 15px;
@@ -161,12 +161,12 @@ a {
 .member-list .inner .card .body .profile span b {
   font-weight: 700;
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   .member-list .inner {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .member-list .inner {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 30px;
@@ -216,7 +216,7 @@ a {
 footer {
   margin-top: 130px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   footer {
     margin-top: 50px;
   }

@@ -26,9 +26,9 @@ $('.modal-cont.designer-inter').click(function(){
 // if ( navigator.platform ) {
 // 	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
 // 		//mobile
-// 		$('.mobile').css('display', 'block');
-// 	} else {
-// 		//pc
-// 		$('.mobile').css('display', 'none');
-//   }
+// 		alert('본 페이지는 PC에 최적화된 웹페이지입니다.')
+// 	} // else {
+// 	// 	//pc
+// 	// 	$('.mobile').css('display', 'none');
+//   // }
 // }

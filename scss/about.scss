@@ -13,22 +13,33 @@ body {
   font-style: normal;
   .inner {
     z-index: 1;
+    width: calc(100% - 360px);
     width: 900px;
     height: 430px;
     padding: 40px 60px;
     backdrop-filter: blur(6px);
+    @include desktop {
+      width: 900px;
+    }
+    @include tablet {
+      width: 100vw;
+      height: 100vh;
+      padding: 0 90px;
+      box-sizing: border-box;
+    }
     @include mobile { 
       width: 100vw;
       height: 100vh;
       padding: 10px 45px;
       box-sizing: border-box;
+      backdrop-filter: blur(2px);
     }
   }
 }
 .title {
   position: fixed;
-  left: calc(50vw - 630px);
   font-size: 18vh;
+  left: calc(50vw - 650px) ;
   @keyframes in {
     0%{
       letter-spacing: -100px;
@@ -77,12 +88,15 @@ body {
       margin-left: -8.2vh;
     }
   }
-  @include big-desktop { 
-    font-size: 18vh;
-    left: calc(50vw - 650px) ; 
+  @include desktop { 
+    left: 90px;
   }
-  @media (max-width:768px) { 
-    font-size: 10vw;
+  @include tablet { 
+    left: 90px;
+  }
+  @include mobile { 
+    left: 40px;
+    font-size: calc(100vw / 8);
     @keyframes in {
       0%{
         letter-spacing: -25px;
@@ -99,10 +113,10 @@ body {
         letter-spacing: 4px;
       }
       30%{
-        letter-spacing: -5.8vw;
+        letter-spacing: -7vw;
       }
       100%{
-        letter-spacing: -5.8vw;
+        letter-spacing: -7vw;
       }
     }
     @keyframes out-2 {
@@ -110,25 +124,12 @@ body {
         letter-spacing: 4px;
       }
       30%{
-        letter-spacing: -5.8vw;
-        margin-left: -5.8vw;
+        letter-spacing: -7vw;
+        margin-left: -7vw;
       }
       100%{
-        letter-spacing: -5.8vw;
-        margin-left: -5.8vw;
-      }
-    }
-    @keyframes out-3 {
-      0%{
-        letter-spacing: 4px;
-      }
-      30%{
-        letter-spacing: -4.4vw;
-        margin-left: -4.4vw;
-      }
-      100%{
-        letter-spacing: -4.4vw;
-        margin-left: -4.4vw;
+        letter-spacing: -7vw;
+        margin-left: -7vw;
       }
     }
   }
@@ -137,8 +138,6 @@ body {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  
-  
 }
 
 
@@ -176,6 +175,12 @@ header {
   right: 95px;
   @include big-desktop { 
     right: calc(50vw - 630px) 
+  }
+  @include desktop {
+    display: none;
+  }
+  @include tablet {
+    display: none;
   }
   @include mobile {
     display: none;
@@ -262,6 +267,20 @@ header {
       font-size: 16px;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+    @include desktop {
+      p {
+        line-height: 160%;
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+    }
+    @include tablet {
+      p {
+        line-height: 160%;
+        margin-bottom: 0;
+        font-size: 14px;
       }
     }
     @include mobile {
@@ -380,6 +399,49 @@ header {
       }
     }
   }
+  @include desktop {
+    .inner {
+      .cont {
+        .left {
+          width: 50%;
+          img {
+            width: 100%;
+          }
+        }
+        .right {
+          width: 50%;
+          font-size: 16px;
+          td, th {
+            padding: 8px 15px;
+          }
+          th {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    .inner {
+      .cont {
+        .left {
+          width: 50%;
+          img {
+            width: 100%;
+          }
+        }
+        .right {
+          font-size: 1.7vw;
+          td, th {
+            padding: 8px 10px;
+          }
+          th {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
   @include mobile {
     .inner {
       .cont {
@@ -487,8 +549,6 @@ header {
             margin: 0 !important;
             font-size: 12px;
             text-align: center;
-          }
-          .prof-name {
           }
           .prof-major {
             margin-top: 0;

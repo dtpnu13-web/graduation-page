@@ -118,7 +118,12 @@ body {
 #menu-cont > div .inner #menu-list a:hover {
   color: #F24822;
 }
-@media (max-width: 500px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+  #menu-cont > div .inner #menu-list a span:first-child {
+    font-size: 60px;
+  }
+}
+@media (max-width: 600px) {
   #menu-cont > div img {
     margin: 50px 40px 0 0;
   }
@@ -165,7 +170,7 @@ header .header-inner {
   width: calc(100% - 180px);
   max-width: 1300px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header .header-inner {
     width: calc(100% - 90px);
   }
@@ -183,7 +188,7 @@ header .header-inner div a #catalogue {
   margin-right: 20px;
   height: 26px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header .header-inner div a #catalogue {
     display: none;
   }
@@ -228,7 +233,12 @@ footer .inner p:first-child {
   margin-bottom: 10px;
   font-weight: 700;
 }
-@media (max-width: 500px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer .inner div:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
   footer .inner {
     width: 100%;
     margin-bottom: -100px;
