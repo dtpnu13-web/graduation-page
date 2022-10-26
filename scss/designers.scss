@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "responsive";
 
 /* COMMON */
 * {
@@ -23,6 +24,10 @@ a {
     z-index: 1;
     width: 930px;
     padding: 40px 60px;
+    @include mobile { 
+      width: calc(100% - 90px);
+      padding: 20px 30px;
+    }
   }
 }
 
@@ -36,6 +41,9 @@ a {
     right: -40px;
     top: 190px;
   }
+  @include mobile {
+    display: none;
+  }
 }
 
 /* PAGE-TOP */
@@ -45,6 +53,10 @@ a {
 	height: 300px;
   line-height: 100%;
   margin-bottom: 50px;
+  @include mobile {
+    height: 100px;
+    margin-bottom: 0;
+  }
   .inner {
     font-family: 'Montserrat';
     font-style: normal;
@@ -66,6 +78,13 @@ a {
         letter-spacing: 0.125em;
       }
     }
+    @include mobile {
+      .txt1 {font-size: 0.5em; margin-bottom: 15px;}
+      .txt2 {
+        font-size: 2em;
+        span {display: none;}
+      }
+    }
   }
 }
 
@@ -74,17 +93,17 @@ a {
   .inner {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: 50px;
+    column-gap: 50px;
     .card {
       background-color: #fff;
       filter: drop-shadow(5px 6px 17px rgba(206, 192, 192, 0.25));
       .img-body {
-        height: 256px;
+        height: 240px;
         position: relative;
         img {
           width: 100%;
-          height: 256px;
+          height: 240px;
           position: absolute;
           object-fit: cover;
           transition: .4s;
@@ -94,16 +113,16 @@ a {
         } 
       }
       .body {
-        padding: 20px;
+        padding: 25px;
         .title {
           font-weight: 700;
-          font-size: 1.2em;
+          font-size: 1.1em;
         }
         .text {
           margin-top: 10px;
           font-family: 'Pretendard';
           font-weight: 300;
-          font-size: 0.8em;
+          font-size: 0.7em;
           letter-spacing: 0.3em;
         }
         .profile {
@@ -128,35 +147,58 @@ a {
         }
       }
     }
+    @include tablet {
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 30px;
+      column-gap: 15px;
+      .card {
+        background-color: #fff;
+        filter: drop-shadow(5px 6px 17px rgba(206, 192, 192, 0.25));
+        .img-body {
+          height: 120px;
+          position: relative;
+          img {
+            width: 100%;
+            height: 120px;
+          } 
+        }
+        .body {
+          position: relative;
+          height: 60px;
+          padding: 10px;
+          .title {
+            font-size: 0.9em;
+          }
+          .text {
+            display: none;
+          }
+          .profile {
+            position: absolute;
+            bottom: 10px;
+            margin: 10px 0 0;
+            font-size: 1em;
+            img {
+              width: 20px;
+              height: 20px;
+            }
+            span {
+              margin-left: 10px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 /* FOOTER */
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+footer {
   margin-top: 130px;
-  margin-bottom: 70px;
-  .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1000px;
-  }
-  .ex_txt {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    .up {
-      font-weight: 700;
-      font-size: 0.8em;
-      line-height: 100%;
-    }
-    .down {
-      font-weight: 400;
-      font-size: 0.8em;
-      line-height: 100%;
-    }
+  @include mobile {
+    margin-top: 50px;
   }
 }

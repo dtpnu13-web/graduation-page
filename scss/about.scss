@@ -1,3 +1,5 @@
+@import "responsive";
+
 /* COMMON */
 body {
   background-image: url('../img/background.png');
@@ -14,65 +16,129 @@ body {
     width: 900px;
     height: 430px;
     padding: 40px 60px;
+    backdrop-filter: blur(6px);
+    @include mobile { 
+      width: 100vw;
+      height: 100vh;
+      padding: 10px 45px;
+      box-sizing: border-box;
+    }
   }
 }
 .title {
   position: fixed;
-  left: 92px;
+  left: calc(50vw - 630px);
+  font-size: 18vh;
+  @keyframes in {
+    0%{
+      letter-spacing: -100px;
+    }
+    30%{
+      letter-spacing: 4px;
+    }
+    100%{
+      letter-spacing: 4px;
+    }
+  }
+  @keyframes out-1 {
+    0%{
+      letter-spacing: 4px;
+    }
+    30%{
+      letter-spacing: -10.5vh;
+    }
+    100%{
+      letter-spacing: -10.5vh;
+    }
+  }
+  @keyframes out-2 {
+    0%{
+      letter-spacing: 4px;
+    }
+    30%{
+      letter-spacing: -10.5vh;
+      margin-left: -10.5vh;
+    }
+    100%{
+      letter-spacing: -10.5vh;
+      margin-left: -10.5vh;
+    }
+  }
+  @keyframes out-3 {
+    0%{
+      letter-spacing: 4px;
+    }
+    30%{
+      letter-spacing: -8.2vh;
+      margin-left: -8.2vh;
+    }
+    100%{
+      letter-spacing: -8.2vh;
+      margin-left: -8.2vh;
+    }
+  }
+  @include big-desktop { 
+    font-size: 18vh;
+    left: calc(50vw - 650px) ; 
+  }
+  @media (max-width:768px) { 
+    font-size: 10vw;
+    @keyframes in {
+      0%{
+        letter-spacing: -25px;
+      }
+      30%{
+        letter-spacing: 4px;
+      }
+      100%{
+        letter-spacing: 4px;
+      }
+    }
+    @keyframes out-1 {
+      0%{
+        letter-spacing: 4px;
+      }
+      30%{
+        letter-spacing: -5.8vw;
+      }
+      100%{
+        letter-spacing: -5.8vw;
+      }
+    }
+    @keyframes out-2 {
+      0%{
+        letter-spacing: 4px;
+      }
+      30%{
+        letter-spacing: -5.8vw;
+        margin-left: -5.8vw;
+      }
+      100%{
+        letter-spacing: -5.8vw;
+        margin-left: -5.8vw;
+      }
+    }
+    @keyframes out-3 {
+      0%{
+        letter-spacing: 4px;
+      }
+      30%{
+        letter-spacing: -4.4vw;
+        margin-left: -4.4vw;
+      }
+      100%{
+        letter-spacing: -4.4vw;
+        margin-left: -4.4vw;
+      }
+    }
+  }
   top: 122px;
   color: #8F8F8F;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 10vw;
-}
-@keyframes in {
-  0%{
-    letter-spacing: -100px;
-  }
-  30%{
-    letter-spacing: 4px;
-  }
-  100%{
-    letter-spacing: 4px;
-  }
-}
-@keyframes out-1 {
-  0%{
-    letter-spacing: 4px;
-  }
-  30%{
-    letter-spacing: -5.8vw;
-  }
-  100%{
-    letter-spacing: -5.8vw;
-  }
-}
-@keyframes out-2 {
-  0%{
-    letter-spacing: 4px;
-  }
-  30%{
-    letter-spacing: -5.8vw;
-    margin-left: -5.8vw;
-  }
-  100%{
-    letter-spacing: -5.8vw;
-    margin-left: -5.8vw;
-  }
-}
-@keyframes out-3 {
-  0%{
-    letter-spacing: 4px;
-  }
-  30%{
-    letter-spacing: -4.4vw;
-    margin-left: -4.4vw;
-  }
-  100%{
-    letter-spacing: -4.4vw;
-    margin-left: -4.4vw;
-  }
+  
+  
 }
 
 
@@ -88,6 +154,9 @@ header {
   justify-content: center;
   .header-inner {
     width: calc(100% - 180px);
+    @include mobile {
+      width: calc(100% - 90px);
+    }
     display: flex;
     justify-content: space-between;
     #menu {
@@ -105,6 +174,12 @@ header {
   align-items: center;
   position: fixed;
   right: 95px;
+  @include big-desktop { 
+    right: calc(50vw - 630px) 
+  }
+  @include mobile {
+    display: none;
+  }
   .inner {
     display: flex;
     flex-direction: column;
@@ -166,6 +241,7 @@ header {
     align-items: center;
     display: flex;
     font-size: 50px;
+    backdrop-filter: none;
   }
 }
 
@@ -186,6 +262,18 @@ header {
       font-size: 16px;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+    @include mobile {
+      justify-content: start;
+      div {
+        display: block;
+        margin-top: 50px;
+      }
+      p {
+        line-height: 160%;
+        margin-bottom: 0;
+        font-size: 14px;
       }
     }
   }
@@ -217,6 +305,29 @@ header {
       }
     }
   }
+  @include mobile {
+    .inner {
+      justify-content: center;
+      .btm {
+        flex-direction: column-reverse;
+        .left {
+          align-self: start;
+          font-size: 14px;
+          line-height: 100%;
+          margin-bottom: 0;
+          p:nth-child(2) {
+            display: none;
+          }
+        }
+        #map {
+          margin-top: 50px;
+          margin-bottom: 20px;
+          width: 100% !important;
+          height: 300px !important;
+        }
+      }
+    }
+  }
 }
 
 /* MADE BY */
@@ -232,8 +343,22 @@ header {
       justify-content: space-between;
       align-items: center;
       height: 100%;
-      img {
+      .left {
         width: 400px;
+        margin-left: 20px;
+        img {
+          width: 400px;
+        }
+        div {
+          margin-top: 10px;
+          p {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 120%;
+            color: #FFFFFF;
+            opacity: 0.4;
+          }
+        }
       }
       .right {
         display: flex;
@@ -251,6 +376,49 @@ header {
         }
         th {
           padding-bottom: 20px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .inner {
+      .cont {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 30px;
+        .left {
+          width: 100%;
+          margin-left: 0;
+          img {
+            width: 100%;
+            margin-bottom: 0;
+          }
+          div {
+            p {
+              font-size: 10px;
+              margin: 0;
+            }
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 12px;
+          margin-top: 20px;
+          >div {
+            margin-bottom: 30px;
+            p:first-child {
+              margin-bottom: 10px;
+              text-align: center;
+            }
+          }
+          td, th {
+            padding: 2px 20px;
+          }
+          th {
+            padding-bottom: 10px;
+          }
         }
       }
     }
@@ -293,6 +461,39 @@ header {
           b {
             font-family: 'Pretendard-Regular', sans-serif;
             font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .inner {
+      .prof-cont {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+        .prof {
+          width: 100%;
+          letter-spacing: 0.13em;
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 10px;
+            width: 90px;
+          }
+          p {
+            width: 250px;
+            margin: 0 !important;
+            font-size: 12px;
+            text-align: center;
+          }
+          .prof-name {
+          }
+          .prof-major {
+            margin-top: 0;
+            height: fit-content;
+            width: 200px;
           }
         }
       }

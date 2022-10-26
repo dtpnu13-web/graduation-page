@@ -22,13 +22,13 @@ $('.modal-cont.designer-inter').click(function(){
 
 
 /* PC 모바일 구분 */
-var filter = "win16|win32|win64|mac|macintel";
-if ( navigator.platform ) {
-	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
-		//mobile
-		$('.mobile').css('display', 'block');
-	} else {
-		//pc
-		$('.mobile').css('display', 'none');
-  }
-}
+// var filter = "win16|win32|win64|mac|macintel";
+// if ( navigator.platform ) {
+// 	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
+// 		//mobile
+// 		$('.mobile').css('display', 'block');
+// 	} else {
+// 		//pc
+// 		$('.mobile').css('display', 'none');
+//   }
+// }

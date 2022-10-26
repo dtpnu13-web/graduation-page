@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://use.typekit.net/sgl5rfs.css");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
 @import url("http://fonts.cdnfonts.com/css/quenos");
@@ -51,12 +52,14 @@ table {
   border-spacing: 0;
 }
 
+/*반응형 화면 크기*/
 /* COMMON */
 body {
   background-image: url("../img/background.png");
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: scroll;
   width: 100vw;
+  height: 100vh;
 }
 
 /* MENU */
@@ -65,7 +68,7 @@ body {
   background: rgba(175, 175, 175, 0.7);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 99;
   position: fixed;
@@ -115,6 +118,37 @@ body {
 #menu-cont > div .inner #menu-list a:hover {
   color: #F24822;
 }
+@media (max-width: 500px) {
+  #menu-cont > div img {
+    margin: 50px 40px 0 0;
+  }
+  #menu-cont > div .inner {
+    width: calc(100% - 90px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #menu-cont > div .inner #menu-list a {
+    margin-bottom: 30px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+  }
+  #menu-cont > div .inner #menu-list a span {
+    font-style: normal;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+  #menu-cont > div .inner #menu-list a span:first-child {
+    font-size: 40px;
+  }
+  #menu-cont > div .inner #menu-list a span:last-child {
+    display: none;
+  }
+  #menu-cont > div .inner #menu-list a:hover {
+    color: #F24822;
+  }
+}
 
 header {
   z-index: 66;
@@ -131,10 +165,30 @@ header .header-inner {
   width: calc(100% - 180px);
   max-width: 1300px;
 }
+@media (max-width: 500px) {
+  header .header-inner {
+    width: calc(100% - 90px);
+  }
+}
 header .header-inner #logo {
   height: 22px;
 }
-header .header-inner #menu {
+header .header-inner div {
+  display: flex;
+}
+header .header-inner div a {
+  display: block;
+}
+header .header-inner div a #catalogue {
+  margin-right: 20px;
+  height: 26px;
+}
+@media (max-width: 500px) {
+  header .header-inner div a #catalogue {
+    display: none;
+  }
+}
+header .header-inner div #menu {
   cursor: pointer;
   height: 24px;
 }
@@ -150,15 +204,16 @@ header .header-inner #menu {
   justify-content: center;
 }
 
-#btm-info {
-  bottom: 100px;
+footer {
+  position: relative;
+  bottom: 0;
   display: flex;
   justify-content: center;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
 }
-#btm-info .inner {
+footer .inner {
   display: flex;
   width: calc(100% - 180px);
   max-width: 1400px;
@@ -166,12 +221,27 @@ header .header-inner #menu {
   align-items: center;
   margin-bottom: 50px;
 }
-#btm-info .inner img {
+footer .inner img {
   width: 120px;
 }
-#btm-info .inner p:first-child {
+footer .inner p:first-child {
   margin-bottom: 10px;
   font-weight: 700;
+}
+@media (max-width: 500px) {
+  footer .inner {
+    width: 100%;
+    margin-bottom: -100px;
+  }
+  footer .inner img {
+    width: 50px;
+  }
+  footer .inner div:nth-child(2) {
+    display: none;
+  }
+  footer .inner div {
+    font-size: 10px;
+  }
 }
 
 .fp-watermark {

@@ -3,6 +3,7 @@
 
  <head>
 	<title>PNU DT 2022 - TEAMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8"/>
   <!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -47,8 +48,13 @@
   <!-- HEADER -->
   <header id="top">
     <div class="header-inner">
+
       <a href="/"><img src="../img/web-logo.svg" alt="logo" id="logo"/></a>
-      <img src="../img/icon_menu.svg" alt="menu" id="menu"/>
+      <div>
+        <a href="javascript:void(0)"><img src="../img/icon_catalogue.svg" alt="catalogue" id="catalogue"/></a>
+        <img src="../img/icon_menu.svg" alt="menu" id="menu"/>
+      </div>
+
     </div>
   </header>
   
@@ -122,7 +128,7 @@
   <div class="section" id="team-film">
     <div class="inner">
 
-    <video autoplay controls loop src="../img/teams/team_photo/film_vary.mp4"></video>
+    <video controls src="../img/teams/team_photo/film_vary.mp4"></video>
     <hr/>
     <div class="tn">		
       PERSONA NO.1736
@@ -138,13 +144,6 @@
   <div class="section" id="team-inter">
     <div class="inner">
 
-      <div class="inter-viewmap">
-        <span>사용 도구 : 웹캠, 빔프로젝트</span>
-        <div>
-          <img src="../img/teams/team_photo/vary_조감도1.png" alt="">
-          <img src="../img/teams/team_photo/vary_조감도2.png" alt="">
-        </div>
-      </div>
       <video autoplay controls loop src="../img/example_mov.mov"></video>
       <hr/>
       <div class="tn">
@@ -172,25 +171,25 @@
   </div>
 
   <!-- FOOTER -->
-  <div class="footer">
+  <footer>
     <div class="inner">
-      <div class="logo">
-        <img src="../img/designers/logo.png" alt="logo">
+
+      <img src="../img/persona_logo.svg" alt="persona">
+      <div>
+        <p>Dept. Design & Technology</p>
+        <p>PUSAN NATIONAL UNIVERSITY</p>
       </div>
-      <div class="ex_txt">
-        <h5 class="up">Dept. Design & Technology</h5>
-        <p class="down">PUSAN NATIONAL UNIVERSITY</p>
+      <div>
+        <p>Location, Schedule</p>
+        <p>부산디자인진흥원, 11/04 ~ 11/06</p>
       </div>
-      <div class="ex_txt">
-        <h5 class="up">Location, Schedule</h5>
-        <p class="down">부산디자인진흥원, 11/04 ~ 11/06</p>
+      <div>
+        <p>Design Theme</p>
+        <p>Persona</p>
       </div>
-      <div class="ex_txt">
-        <h5 class="up">Design Theme</h5>
-        <p class="down">Persona</p>
-      </div>
+
     </div>
-  </div>
+  </footer>
 
   <!-- MODAL-CONT -->
   <div class="modal-cont film-modal">
@@ -244,6 +243,12 @@
         </div>
         <hr>
         <div class="photo-cont">
+          <div class="inter-viewmap">
+            <div>
+              <img src="../img/teams/team_photo/vary_조감도1.png" alt="">
+              <img src="../img/teams/team_photo/vary_조감도2.png" alt="">
+            </div>
+          </div>
           <div class="inter-example">
             <div>
               <img src="../img/teams/team_photo/inter_example-1_vary.jpeg" alt="">
