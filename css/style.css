@@ -118,7 +118,7 @@ body {
 #menu-cont > div .inner #menu-list a:hover {
   color: #F24822;
 }
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   #menu-cont > div .inner #menu-list a span:first-child {
     font-size: 60px;
   }
@@ -233,7 +233,7 @@ footer .inner p:first-child {
   margin-bottom: 10px;
   font-weight: 700;
 }
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   footer .inner div:nth-child(2) {
     display: none;
   }

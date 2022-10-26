@@ -304,6 +304,23 @@ a {
       }
     }
   }
+  @include tablet {
+    .inner {
+      .txt {
+        .desc {
+          div:nth-child(3) {
+            width: 50vw;
+          }
+        }
+      }
+      .img {
+        img {
+          width: calc(346px / 1.5);
+          height: calc(493px / 1.5);
+        }
+      }
+    }
+  }
   @include mobile {
     margin-top: 80px;
     .inner {
@@ -369,6 +386,9 @@ a {
             width: 646px;
             top: 30px;
             left: 690px;
+            @include tablet {
+              display: none;
+            }
             @include mobile {
               display: none;
             }
@@ -468,6 +488,89 @@ a {
         img {
           width: 293px;
           height: 173px;
+        }
+      }
+    }
+  }
+  @include tablet {
+    margin-top: 80px;
+    .inner {
+      .top {
+        flex-direction: column;
+        height:fit-content;
+        gap: 20px;
+        .txt {
+          align-items: start;
+          justify-content:flex-start;
+          .title {
+            font-size: 45px;
+          }
+          .sub-title {
+            font-size: 10px;
+          }
+          .desc {
+            width: 100%;
+            div {
+              width: 100%;
+              &:nth-child(1) { margin-top: 30px; }
+              &:nth-child(2) {
+                font-size: 1.8em;
+                margin-bottom: 10px;
+                margin-top: 5px;
+              }
+              &:nth-child(3) {
+                width: 100%;
+                font-size: 14px;
+                line-height: 130%;
+              }
+            }
+            .view-map {
+              width: 100%;
+              img {
+                width: 200px;
+                height:fit-content;
+              }
+            }
+          }
+        }
+        .btn-modal__open {
+          z-index: 10;
+          cursor: pointer;
+          position: absolute;
+          top: 680px;
+          left: calc(100vw - 200px);
+          img {
+            width: 100px;
+          }
+        }
+        .img {
+          width: 100%;
+          align-self: start;
+          img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+          }
+        }
+      }
+      .examples {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        overflow: scroll;
+        .example {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          img {
+            width: calc(100vw / 4);
+            height: fit-content;
+          }
+          p {
+            font-size: 12px;
+          }
         }
       }
     }

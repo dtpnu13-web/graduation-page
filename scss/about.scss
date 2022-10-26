@@ -93,6 +93,42 @@ body {
   }
   @include tablet { 
     left: 90px;
+    font-size: calc(100vw / 8);
+    @keyframes in {
+      0%{
+        letter-spacing: -25px;
+      }
+      30%{
+        letter-spacing: 4px;
+      }
+      100%{
+        letter-spacing: 4px;
+      }
+    }
+    @keyframes out-1 {
+      0%{
+        letter-spacing: 4px;
+      }
+      30%{
+        letter-spacing: calc(-100vw / 14);
+      }
+      100%{
+        letter-spacing: calc(-100vw / 14);
+      }
+    }
+    @keyframes out-2 {
+      0%{
+        letter-spacing: 4px;
+      }
+      30%{
+        letter-spacing: calc(-100vw / 14);
+        margin-left: calc(-100vw / 14);
+      }
+      100%{
+        letter-spacing: calc(-100vw / 14);
+        margin-left: calc(-100vw / 14);
+      }
+    }
   }
   @include mobile { 
     left: 40px;

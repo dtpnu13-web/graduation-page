@@ -161,7 +161,7 @@ a {
 .member-list .inner .card .body .profile span b {
   font-weight: 700;
 }
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   .member-list .inner {
     grid-template-columns: repeat(2, 1fr);
   }
