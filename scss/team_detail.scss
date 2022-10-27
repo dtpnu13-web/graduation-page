@@ -34,9 +34,14 @@ a {
 }
 
 #team-member, #concept, #team-film, #team-inter {
-  height: 100vh;
+  min-height: 100vh;
   @include mobile {
-    height: fit-content;
+    min-height: fit-content;
+    margin-bottom: 80px;
+  }
+  @include mobile {
+    min-height: fit-content;
+    margin-bottom: 40px;
   }
 }
 
@@ -99,6 +104,9 @@ a {
       0%{transform:translate(0,0);}
       100%{transform:translate(0,30px);}
     }  
+  }
+  @include tablet {
+    display: none;
   }
   @include mobile {
     display: none;
@@ -164,6 +172,10 @@ a {
           width: 200px;
           height: 285px;
           object-fit: cover;
+          @include tablet {
+            width: 100%;
+            height: fit-content;
+          }
         }
         .name {
           margin-top: 10px;
@@ -200,7 +212,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../img/teams/background-logo.svg");
+    background-image: url("../img/teams/team_logo.svg");
     background-repeat: no-repeat;
     background-size: 55%;
     background-position: 50% 30%;
@@ -237,7 +249,7 @@ a {
   }
 }
 
-/* TEAM-FILM */
+/* TEAM-FILM, TEAM-INTER */
 #team-film, #team-inter {
   .inner {
     position: relative;
@@ -259,6 +271,23 @@ a {
         filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.09));
       }
     }
+    @include tablet {
+      width: 100%;
+      margin-top: 50px;
+      video {
+        width: 100%;
+      }
+      hr {
+        color: #000;
+        margin-top: 20px 0;
+      }
+      .tn {
+        font-size: 14px;
+      }
+      .btn-modal__open {
+        display: none;
+      }
+    }
     @include mobile {
       width: 100%;
       margin-top: 50px;
@@ -274,6 +303,68 @@ a {
       }
       .btn-modal__open {
         display: none;
+      }
+    }
+  }
+}
+
+#team-film {
+  .film-desc {
+    display: none;
+    margin-top: 40px;
+    line-height: 160%;
+    @include tablet {
+      display: block;
+      font-size: 16px;
+    }
+    @include mobile {
+      display: block;
+      font-size: 14px;
+    }
+  }
+}
+
+#team-inter {
+  .inter-desc {
+    display: none;
+    @include tablet {
+      display: block;
+      font-size: 16px;
+    }
+    @include mobile {
+      display: block;
+      font-size: 14px;
+    }
+    .desc {
+      margin: 40px 0;
+      line-height: 160%;
+    }
+    .photo-cont {
+      .inter-viewmap {
+        margin-bottom: 20px;
+        div {
+          display: flex;
+          gap: 24px;
+          img {
+            max-width: calc(100% / 3.3);
+          }
+        }
+      }
+      .inter-example {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        div {
+          img {
+            max-width: 100%;
+          }
+          p {
+            max-width: 100%;
+            margin-top: 10px;
+            line-height: 130%;
+            font-size: 0.8em;
+          }
+        }
       }
     }
   }

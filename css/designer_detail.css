@@ -102,7 +102,7 @@ a {
   justify-content: space-between;
 }
 .profile .inner .profile_cont .profile_txt {
-  align-self: flex-start;
+  align-self: flex-end;
   margin-left: 30px;
 }
 .profile .inner .profile_cont .profile_txt .sns {
@@ -160,6 +160,7 @@ a {
   }
   .profile .inner .profile_cont .profile_txt {
     margin-left: 0;
+    align-self: flex-start;
   }
   .profile .inner .profile_cont .profile_txt .sns {
     margin-bottom: 15px;
