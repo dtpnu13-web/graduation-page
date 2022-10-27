@@ -1,3 +1,5 @@
+@import "responsive";
+
 /* COMMON */
 * {
   list-style: none;
@@ -24,11 +26,23 @@ a {
     z-index: 1;
     width: 930px;
     padding: 40px 60px;
+    @include mobile { 
+      width: calc(100% - 90px);
+      padding: 20px 30px;
+    }
   }
 }
 
 #team-member, #concept, #team-film, #team-inter {
-  height: 100vh;
+  min-height: 100vh;
+  @include mobile {
+    min-height: fit-content;
+    margin-bottom: 80px;
+  }
+  @include mobile {
+    min-height: fit-content;
+    margin-bottom: 40px;
+  }
 }
 
 /* SIDE BAR */
@@ -91,6 +105,12 @@ a {
       100%{transform:translate(0,30px);}
     }  
   }
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 /* PAGE-TOP */
@@ -100,6 +120,10 @@ a {
 	height: 300px;
   line-height: 100%;
   margin-bottom: 100px;
+  @include mobile {
+    height: 100px;
+    margin-bottom: 0;
+  }
   .inner {
     font-family: 'Montserrat';
     font-style: normal;
@@ -121,6 +145,14 @@ a {
         letter-spacing: 0.125em;
       }
     }
+    @include mobile {
+      .txt1 {font-size: 0.5em; margin-bottom: 15px;}
+      .txt2 {
+        font-size: 2em;
+        line-height: 100%;
+        span {display: none;}
+      }
+    }
   }
 }
 
@@ -140,9 +172,33 @@ a {
           width: 200px;
           height: 285px;
           object-fit: cover;
+          @include tablet {
+            width: 100%;
+            height: fit-content;
+          }
         }
         .name {
           margin-top: 10px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .inner {
+      width: 100%;
+      .profile_cont {
+        margin: 0 40px;
+        column-gap:10px;
+        row-gap: 20px;
+        .profile {
+          img {
+            width: calc(200px / 2);
+            height: calc(285px / 2);
+            object-fit: cover;
+          }
+          .name {
+            margin-top: 10px;
+          }
         }
       }
     }
@@ -156,6 +212,10 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url("../img/teams/team_logo.svg");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: 50% 30%;
     .sub-title {
       font-family: 'Montserrat';
       font-weight: 300;
@@ -181,10 +241,15 @@ a {
         text-align: justify;
         color: #000000;
     }
+    @include mobile {
+      .sub-title {font-size: 15px; margin-top: 50px;}
+      .title {font-size: 45px; margin-top: 0px; text-align: center;}
+      .txt {font-size: 14px; margin-top: 20px;}
+    }
   }
 }
 
-/* TEAM-FILM */
+/* TEAM-FILM, TEAM-INTER */
 #team-film, #team-inter {
   .inner {
     position: relative;
@@ -206,25 +271,100 @@ a {
         filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.09));
       }
     }
+    @include tablet {
+      width: 100%;
+      margin-top: 50px;
+      video {
+        width: 100%;
+      }
+      hr {
+        color: #000;
+        margin-top: 20px 0;
+      }
+      .tn {
+        font-size: 14px;
+      }
+      .btn-modal__open {
+        display: none;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 50px;
+      video {
+        width: 100%;
+      }
+      hr {
+        color: #000;
+        margin-top: 20px 0;
+      }
+      .tn {
+        font-size: 14px;
+      }
+      .btn-modal__open {
+        display: none;
+      }
+    }
   }
 }
-#team-inter {
-  .inner {
-    .btn-modal__open {
-      top: 480px;
+
+#team-film {
+  .film-desc {
+    display: none;
+    margin-top: 40px;
+    line-height: 160%;
+    @include tablet {
+      display: block;
+      font-size: 16px;
     }
-    .inter-viewmap {
-      display: flex;
-      justify-content: space-between;
-      // text-align: right;
-      margin-bottom: 15px;
-      span {
-        font-size: 0.8em;
-        align-self: end;
+    @include mobile {
+      display: block;
+      font-size: 14px;
+    }
+  }
+}
+
+#team-inter {
+  .inter-desc {
+    display: none;
+    @include tablet {
+      display: block;
+      font-size: 16px;
+    }
+    @include mobile {
+      display: block;
+      font-size: 14px;
+    }
+    .desc {
+      margin: 40px 0;
+      line-height: 160%;
+    }
+    .photo-cont {
+      .inter-viewmap {
+        margin-bottom: 20px;
+        div {
+          display: flex;
+          gap: 24px;
+          img {
+            max-width: calc(100% / 3.3);
+          }
+        }
       }
-      img {
-        width: 180px;
-        margin-left: 20px;
+      .inter-example {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        div {
+          img {
+            max-width: 100%;
+          }
+          p {
+            max-width: 100%;
+            margin-top: 10px;
+            line-height: 130%;
+            font-size: 0.8em;
+          }
+        }
       }
     }
   }
@@ -343,9 +483,20 @@ a {
         margin: 40px 0;
       }
       .photo-cont {
+        .inter-viewmap {
+          margin-bottom: 80px;
+          div {
+            display: flex;
+            gap: 24px;
+            img {
+              max-width: 210px;
+            }
+          }
+        }
         .inter-example {
           display: flex;
           justify-content: space-between;
+          gap: 24px;
           div {
             img {
               max-width: 210px;
@@ -378,35 +529,24 @@ a {
       }
     }
   }
+  @include mobile {
+    margin-top: 50px;
+    .inner {
+      gap: 20px;
+      .prev, .next {
+        img {
+          height: 40px;
+        }
+      }
+    }
+  }
 }
 
 /* FOOTER */
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+footer {
   margin-top: 130px;
-  margin-bottom: 70px;
-  .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1000px;
-  }
-  .ex_txt {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    .up {
-      font-weight: 700;
-      font-size: 0.8em;
-      line-height: 100%;
-    }
-    .down {
-      font-weight: 400;
-      font-size: 0.8em;
-      line-height: 100%;
-    }
+  @include mobile {
+    margin-top: 50px;
   }
 }
 
@@ -414,7 +554,7 @@ a {
 
 /////
 .tn {
-    font-family: 'Montserrat';
+  font-family: 'Montserrat';
 	font-style: normal;
 }
 .v_info {

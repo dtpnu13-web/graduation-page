@@ -22,13 +22,13 @@ $('.modal-cont.designer-inter').click(function(){
 
 
 /* PC 모바일 구분 */
-var filter = "win16|win32|win64|mac|macintel";
-if ( navigator.platform ) {
-	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
-		//mobile
-		$('.mobile').css('display', 'block');
-	} else {
-		//pc
-		$('.mobile').css('display', 'none');
-  }
-}
+// var filter = "win16|win32|win64|mac|macintel";
+// if ( navigator.platform ) {
+// 	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
+// 		//mobile
+// 		alert('본 페이지는 PC에 최적화된 웹페이지입니다.')
+// 	} // else {
+// 	// 	//pc
+// 	// 	$('.mobile').css('display', 'none');
+//   // }
+// }

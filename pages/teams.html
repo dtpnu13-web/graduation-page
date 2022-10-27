@@ -3,6 +3,7 @@
 <head>
 
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PNU DT 2022 - TEAMS</title>
 
   <!-- jquery -->
@@ -13,7 +14,6 @@
 
   <script defer src="../js/index.js"></script>
   <script defer src="../js/teams.js"></script>
-  <!-- <script defer src="../js/teams_scroll.js"></script> -->
 
   <!--폰트 구간-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +54,13 @@
   <!-- HEADER -->
   <header>
     <div class="header-inner">
+
       <a href="/"><img src="../img/web-logo.svg" alt="logo" id="logo"/></a>
-      <img src="../img/icon_menu.svg" alt="menu" id="menu"/>
+      <div>
+        <a href="javascript:void(0)"><img src="../img/icon_catalogue.svg" alt="catalogue" id="catalogue"/></a>
+        <img src="../img/icon_menu.svg" alt="menu" id="menu"/>
+      </div>
+    
     </div>
   </header>
 
@@ -102,8 +107,8 @@
       <div class="contents">
         <div class="team-cont showing" id="vary">
           <a class="team-cont__img" href="team_vary.html">
-            <img src="../img/teams/team_photo/inter_thumbnail_vary.jpeg" alt="thumbnail">
-            <img src="../img/teams/team_photo/film_thumbnail_vary.png" alt="thumbnail">
+            <img src="../img/teams/team_photo/VARY_inter.jpg" alt="thumbnail">
+            <img src="../img/teams/team_photo/VARY_film.jpg" alt="thumbnail">
           </a>
           <hr/>
           <div class="tl">
@@ -113,8 +118,8 @@
         </div>
         <div class="team-cont" id="name">
           <a class="team-cont__img" href="javascript:void(0)">
-            <img src="../img/teams/team_photo/inter_thumbnail_name.png" alt="thumbnail">
-            <img src="../img/teams/team_photo/film_thumbnail_name.png" alt="thumbnail">
+            <img src="../img/teams/team_photo/NAME_inter.jpg" alt="thumbnail">
+            <img src="../img/teams/team_photo/NAME_film.jpg" alt="thumbnail">
           </a>
           <hr/>
           <div class="tl">
@@ -124,8 +129,8 @@
         </div>
         <div class="team-cont" id="dope">
           <a class="team-cont__img" href="javascript:void(0)">
-            <img src="../img/teams/team_photo/inter_thumbnail_dope.jpeg" alt="thumbnail">
-            <img src="../img/teams/team_photo/film_thumbnail_dope.jpeg" alt="thumbnail">
+            <img src="../img/teams/team_photo/DOPE_inter.jpg" alt="thumbnail">
+            <img src="../img/teams/team_photo/DOPE_film.jpg" alt="thumbnail">
           </a>
           <hr/>
           <div class="tl">
@@ -139,25 +144,25 @@
   </div>
 
   <!-- FOOTER -->
-  <div class="footer">
+  <footer>
     <div class="inner">
-      <div class="logo">
-        <img src="../img/designers/logo.png" alt="logo">
+
+      <img src="../img/persona_logo.svg" alt="persona">
+      <div>
+        <p>Dept. Design & Technology</p>
+        <p>PUSAN NATIONAL UNIVERSITY</p>
       </div>
-      <div class="ex_txt">
-        <h5 class="up">Dept. Design & Technology</h5>
-        <p class="down">PUSAN NATIONAL UNIVERSITY</p>
+      <div>
+        <p>Location, Schedule</p>
+        <p>부산디자인진흥원, 11/04 ~ 11/06</p>
       </div>
-      <div class="ex_txt">
-        <h5 class="up">Location, Schedule</h5>
-        <p class="down">부산디자인진흥원, 11/04 ~ 11/06</p>
+      <div>
+        <p>Design Theme</p>
+        <p>Persona</p>
       </div>
-      <div class="ex_txt">
-        <h5 class="up">Design Theme</h5>
-        <p class="down">Persona</p>
-      </div>
+
     </div>
-  </div>
+  </footer>
 
 </body>
 </html>
